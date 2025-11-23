@@ -1,0 +1,241 @@
+@charset "UTF-8";
+.criar-pedidos {
+  box-sizing: border-box;
+}
+
+.criar-pedidos *, .criar-pedidos *::before, .criar-pedidos *::after {
+  box-sizing: inherit;
+}
+
+.criar-pedidos {
+  min-height: 100vh;
+  background: linear-gradient(180deg, #f6f7fb 0%, rgb(249.5307692308, 250.1384615385, 252.5692307692) 100%);
+  padding: 20px;
+  color: #0f1724;
+  font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+}
+.criar-pedidos .container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 18px;
+}
+@media (min-width: 920px) {
+  .criar-pedidos .container {
+    grid-template-columns: 1fr 360px;
+    align-items: start;
+    gap: 28px;
+  }
+}
+.criar-pedidos .header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 18px;
+  margin-bottom: 4px;
+}
+.criar-pedidos .header .title h1 {
+  margin: 0;
+  font-size: 1.6rem;
+  font-weight: 700;
+}
+.criar-pedidos .header .title p {
+  margin: 0;
+  color: #6b7280;
+  font-size: 0.95rem;
+}
+.criar-pedidos .header .actions .btn {
+  background: transparent;
+  border: none;
+  color: #0f62fe;
+  cursor: pointer;
+  font-weight: 600;
+}
+.criar-pedidos .card {
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 8px 28px rgba(15, 22, 36, 0.06);
+  padding: 18px;
+  border: 1px solid rgba(15, 22, 36, 0.04);
+}
+.criar-pedidos .form .card {
+  padding: 22px;
+  background: linear-gradient(180deg, #f4f9ff 0%, #ffffff 100%);
+  border: 1px solid rgba(15, 22, 36, 0.05);
+  box-shadow: 0 14px 40px rgba(15, 22, 36, 0.06);
+  max-width: 920px;
+  margin: 0 auto; /* centraliza o formulário */
+}
+.criar-pedidos .form .form-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+}
+@media (min-width: 640px) {
+  .criar-pedidos .form .form-grid {
+    grid-template-columns: 1fr 240px;
+  }
+}
+@media (min-width: 920px) {
+  .criar-pedidos .form .form-grid {
+    grid-template-columns: 1fr 320px;
+  }
+}
+.criar-pedidos .form fieldset {
+  border: none;
+  padding: 0;
+  margin: 0;
+}
+.criar-pedidos .form .form-row {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 12px;
+}
+@media (min-width: 640px) {
+  .criar-pedidos .form .form-row {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+.criar-pedidos .form .form-group {
+  display: flex;
+  flex-direction: column;
+}
+.criar-pedidos .form label {
+  font-size: 0.9rem;
+  color: #6b7280;
+  margin-bottom: 8px;
+}
+.criar-pedidos .form input[type=text], .criar-pedidos .form input[type=number], .criar-pedidos .form select, .criar-pedidos .form textarea {
+  height: 46px;
+  padding: 10px 12px;
+  border-radius: 10px;
+  border: 1px solid rgba(15, 22, 36, 0.06);
+  background: #fff;
+  color: #0f1724;
+  font-size: 0.95rem;
+  transition: box-shadow 0.12s ease, transform 0.08s ease, border-color 0.12s ease;
+  outline: none;
+}
+.criar-pedidos .form textarea {
+  min-height: 100px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  height: auto;
+}
+.criar-pedidos .form input:focus, .criar-pedidos .form textarea:focus, .criar-pedidos .form select:focus {
+  box-shadow: 0 6px 20px rgba(15, 98, 254, 0.08);
+  border-color: #0f62fe;
+  transform: translateY(-1px);
+}
+.criar-pedidos .form .form-actions {
+  margin-top: 18px;
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+}
+.criar-pedidos .form .btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 16px;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  font-weight: 700;
+}
+.criar-pedidos .form .btn-primary {
+  background: #0f62fe;
+  color: white;
+  box-shadow: 0 10px 30px rgba(15, 98, 254, 0.12);
+  min-width: 140px;
+}
+.criar-pedidos .form .btn-primary:hover {
+  background: #0747a6;
+}
+.criar-pedidos .form .btn-primary:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  box-shadow: none;
+}
+.criar-pedidos .form .btn-secondary {
+  background: transparent;
+  border: 1px solid rgba(15, 22, 36, 0.06);
+  color: #6b7280;
+  padding: 8px 12px;
+  border-radius: 8px;
+}
+@media (min-width: 640px) {
+  .criar-pedidos .form .form-actions {
+    justify-content: stretch;
+  }
+  .criar-pedidos .form .form-actions .btn {
+    width: 100%;
+  }
+}
+.criar-pedidos .form label > input[type=checkbox] {
+  margin-right: 8px;
+  transform: translateY(2px);
+}
+.criar-pedidos .form input::-moz-placeholder, .criar-pedidos .form textarea::-moz-placeholder {
+  color: rgb(138.5472340426, 144.9157446809, 157.6527659574);
+}
+.criar-pedidos .form input::placeholder, .criar-pedidos .form textarea::placeholder {
+  color: rgb(138.5472340426, 144.9157446809, 157.6527659574);
+}
+.criar-pedidos .form aside.card {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.criar-pedidos .form aside h3 {
+  margin: 0 0 6px 0;
+  font-size: 1.05rem;
+}
+.criar-pedidos .form .preview-row {
+  display: flex;
+  justify-content: space-between;
+  color: #6b7280;
+  font-size: 0.95rem;
+}
+.criar-pedidos .summary .card {
+  padding: 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  position: sticky;
+  top: 20px;
+}
+.criar-pedidos .summary .summary-row {
+  display: flex;
+  justify-content: space-between;
+  color: #6b7280;
+}
+.criar-pedidos .summary .totals {
+  font-weight: 800;
+  color: #0f1724;
+  font-size: 1.1rem;
+  border-top: 1px dashed rgba(15, 22, 36, 0.04);
+  padding-top: 8px;
+}
+.criar-pedidos .chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 10px;
+  border-radius: 999px;
+  background: rgba(15, 22, 36, 0.04);
+  color: #6b7280;
+  font-size: 0.85rem;
+}
+.criar-pedidos .muted {
+  color: #6b7280;
+}
+.criar-pedidos .sr-only {
+  position: absolute !important;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+  clip: rect(1px, 1px, 1px, 1px);
+  white-space: nowrap;
+}/*# sourceMappingURL=criarpedidos.component.css.map */
